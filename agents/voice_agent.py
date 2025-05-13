@@ -12,8 +12,7 @@ app = FastAPI()
 
 stt_model = whisper.load_model("base")
 
-ANALYSIS_URL = "http://localhost:8004/analyze"
-LLM_URL = "http://localhost:8005/generate_briefing"
+from config import ANALYSIS_URL, LLM_URL
 
 @app.post("/voice_input")
 async def voice_input(audio: UploadFile = File(...)):

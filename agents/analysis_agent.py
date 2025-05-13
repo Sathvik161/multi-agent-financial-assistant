@@ -8,9 +8,8 @@ from pydantic import BaseModel
 app = FastAPI()
 
 # Local FastAPI microservice endpoints
-API_AGENT_URL = "https://api-agent.onrender.com"
-SCRAPER_AGENT_URL = "https://scraping-agent.onrender.com"
-RETRIEVER_AGENT_URL = "https://retriever-agent.onrender.com"
+from config import API_AGENT_URL, SCRAPER_AGENT_URL, RETRIEVER_AGENT_URL
+
 
 class AnalysisRequest(BaseModel):
     portfolio_data: dict
