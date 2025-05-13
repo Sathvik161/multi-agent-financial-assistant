@@ -1,11 +1,15 @@
 import streamlit as st
 import requests
+import sys
+import os
+# Add project root directory to PYTHONPATH
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from config import VOICE_AGENT_URL, ORCHESTRATOR_URL
 
 st.set_page_config(page_title="📈 Market Brief Assistant", layout="centered")
 st.title("🎙️ Morning Market Brief Assistant")
 
 # Backend URLs
-from config import VOICE_AGENT_URL, ORCHESTRATOR_URL
 
 
 # Initialize session state

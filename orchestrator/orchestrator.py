@@ -5,6 +5,11 @@ import requests
 
 app = FastAPI()
 
+
+import sys
+import os
+# Add project root directory to PYTHONPATH
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 # Microservice URLs
 from config import ANALYSIS_URL, LLM_URL
 

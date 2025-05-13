@@ -7,6 +7,11 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
+
+import sys
+import os
+# Add project root directory to PYTHONPATH
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 # Local FastAPI microservice endpoints
 from config import API_AGENT_URL, SCRAPER_AGENT_URL, RETRIEVER_AGENT_URL
 
