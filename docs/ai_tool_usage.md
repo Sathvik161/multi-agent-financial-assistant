@@ -14,7 +14,7 @@ This document details all prompts, AI-generated code, and model parameters used 
 
 ---
 
-## 🧠 Prompts Used for Code Generation
+##  Prompts Used for Code Generation
 
 ### Language Agent Prompt
 ```text
@@ -48,14 +48,7 @@ You are a financial assistant. Given a structured market summary, generate a cle
 
 ---
 
-## 🧪 Evaluation Strategy
-- Responses were iteratively tested via `curl`, Streamlit, and REST
-- Refined based on error messages, context loss, and response truncation
-- Prompt tuning and API error handling done manually
-
----
-
-## ⚙️ Notes
+## ⚙ Notes
 
 - Whisper (openai/whisper) model used for STT
 - pyttsx3 used for offline TTS
