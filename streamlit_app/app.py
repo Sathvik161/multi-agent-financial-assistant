@@ -1,10 +1,8 @@
 import streamlit as st
 import requests
-import sys
-import os
-# Add project root directory to PYTHONPATH
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from config import VOICE_AGENT_URL, ORCHESTRATOR_URL
+
+VOICE_AGENT_URL = "http://localhost:8006/voice_input"
+ORCHESTRATOR_URL = "http://localhost:8007/briefing"
 
 st.set_page_config(page_title="📈 Market Brief Assistant", layout="centered")
 st.title("🎙️ Morning Market Brief Assistant")
