@@ -1,0 +1,48 @@
+version: "3.8"
+
+services:
+  streamlit:
+    build: .
+    ports:
+      - "8501:8501"
+    depends_on:
+      - orchestrator
+    env_file:
+      - .env
+
+  api_agent:
+    build:
+      context: .
+    command: uvicorn agents.api_agent:app --host 0.0.0.0 --port 8001
+
+  scraping_agent:
+    build:
+      context: .
+    command: uvicorn agents.scraping_agent:app --host 0.0.0.0 --port 8002
+
+  retriever_agent:
+    build:
+      context: .
+    command: uvicorn agents.retriever_agent:app --host 0.0.0.0 --port 8003
+
+  analysis_agent:
+    build:
+      context: .
+    command: uvicorn agents.analysis_agent:app --host 0.0.0.0 --port 8004
+
+  language_agent:
+    build:
+      context: .
+    command: uvicorn agents.language_agent:app --host 0.0.0.0 --port 8005
+    env_file:
+      - .env
+
+  voice_agent:
+    build:
+      context: .
+    command: uvicorn agents.voice_agent:app --host 0.0.0.0 --port 8006
+
+  orchestrator:
+    build:
+      context: .
+    command: uvicorn orchestrator.orchestrator:app --host 0.0.0.0 --port 8007
