@@ -6,8 +6,8 @@ import requests
 app = FastAPI()
 
 # Microservice URLs
-ANALYSIS_URL = "http://localhost:8004/analyze"
-LLM_URL = "http://localhost:8005/generate_briefing"
+ANALYSIS_URL = "https://analysis-agent.onrender.com/analyze"
+LLM_URL = "https://language-agent.onrender.com/generate_briefing"
 
 @app.get("/briefing")
 def get_briefing(
