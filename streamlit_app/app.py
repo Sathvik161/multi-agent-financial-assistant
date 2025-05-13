@@ -5,8 +5,8 @@ st.set_page_config(page_title="📈 Market Brief Assistant", layout="centered")
 st.title("🎙️ Morning Market Brief Assistant")
 
 # Backend URLs
-ORCHESTRATOR_URL = "http://localhost:8007/briefing"
-VOICE_AGENT_URL = "http://localhost:8006/voice_input"
+VOICE_AGENT_URL = "https://voice-agent-service.onrender.com/voice_input"
+ORCHESTRATOR_URL = "https://orchestrator-service.onrender.com/briefing"
 
 # Initialize session state
 if "voice_response_ready" not in st.session_state:
